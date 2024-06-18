@@ -1,38 +1,124 @@
-.App {
+h1, h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav {
+  background-color: blue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f6f7;
+}
+
+.cardebook {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+  .cardebook {
+      justify-content: center;
+      display: grid;
+      padding-bottom: 10px;
+  }
+  .titulo {
+      text-align: center;
+      padding-bottom: 30px;
+  }
+  .cardebook {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .header, footer {
+      text-align: center;
+      text-transform: uppercase;
+      padding: 16px;
+      background-color: #0a0a23;
+      color: #fff;
+      border-bottom: 4px solid red;
+  }
+}
+
+.textoinicio {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+}
+
+.header, footer {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid red;
+}
+
+.card-text {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.curtinho {
+  text-align: justify;
+  padding: 30px;
+  margin-left: 15rem;
+  margin-right: 15rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+section {
+  margin-bottom: 20px;
+}
+
+.curtinho {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  .curtinho {
+      font-size: 14px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (max-width: 576px) {
+  .curtinho {
+      font-size: 12px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.carousel {
+  width: 100%;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.active {
+  display: block;
 }
